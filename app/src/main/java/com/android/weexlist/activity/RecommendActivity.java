@@ -34,7 +34,7 @@ public class RecommendActivity extends FragmentActivity implements IWXRenderList
         frameLayout = (FrameLayout) findViewById(R.id.fl_container);
         mWxsdkInstance = new WXSDKInstance(this);
         mWxsdkInstance.registerRenderListener(this);
-        mWxsdkInstance.render("WeexListApp", WXFileUtils.loadAsset("recommend.js", this), null, null, -1, -1, WXRenderStrategy.APPEND_ASYNC);
+        mWxsdkInstance.render("WeexListApp", WXFileUtils.loadAsset("recommend.js", this), null, null, WXRenderStrategy.APPEND_ASYNC);
 
         swipeRefreshLayout.setPtrHandler(new WeexPtrDefaultHandler() {
             @Override

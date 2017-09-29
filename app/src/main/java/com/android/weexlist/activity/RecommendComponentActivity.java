@@ -27,7 +27,7 @@ public class RecommendComponentActivity extends Activity implements IWXRenderLis
         linearLayout = (LinearLayout) findViewById(R.id.ll_container);
         mWxsdkInstance = new WXSDKInstance(this);
         mWxsdkInstance.registerRenderListener(this);
-        mWxsdkInstance.render("WeexListApp", WXFileUtils.loadAsset("recommendcomponent.js", this), null, null, -1, -1, WXRenderStrategy.APPEND_ASYNC);
+        mWxsdkInstance.render("WeexListApp", WXFileUtils.loadAsset("recommendcomponent.js", this), null, null, WXRenderStrategy.APPEND_ASYNC);
     }
 
 
@@ -55,7 +55,7 @@ public class RecommendComponentActivity extends Activity implements IWXRenderLis
      */
     @Override
     public void onRenderSuccess(WXSDKInstance instance, int width, int height) {
-        WXLogUtils.i("lz","success");
+        WXLogUtils.i("lz", "success");
     }
 
     /**
@@ -80,6 +80,6 @@ public class RecommendComponentActivity extends Activity implements IWXRenderLis
      */
     @Override
     public void onException(WXSDKInstance instance, String errCode, String msg) {
-        WXLogUtils.i("lz","onException");
+        WXLogUtils.i("lz", "onException");
     }
 }
