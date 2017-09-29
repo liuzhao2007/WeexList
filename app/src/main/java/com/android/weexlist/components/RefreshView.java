@@ -42,8 +42,6 @@ public class RefreshView extends WXVContainer<MaterialDesignPtrFrameLayout> {
 
     @Override
     protected MaterialDesignPtrFrameLayout initComponentHostView(@NonNull Context context) {
-
-        Log.i("lz", "initComponentHostView::");
         final MaterialDesignPtrFrameLayout materialDesignPtrFrameLayout = new MaterialDesignPtrFrameLayout(context);
         materialDesignPtrFrameLayout.setPinContent(true);//设置内容不动。
         materialDesignPtrFrameLayout.setPtrHandler(new PtrDefaultHandler() {
@@ -75,9 +73,7 @@ public class RefreshView extends WXVContainer<MaterialDesignPtrFrameLayout> {
                         materialDesignPtrFrameLayout.refreshComplete();
                     }
                 },1000);
-
             }
-
         });
 
         return materialDesignPtrFrameLayout;
@@ -85,12 +81,6 @@ public class RefreshView extends WXVContainer<MaterialDesignPtrFrameLayout> {
 
     @WXComponentProp(name = "diaplay")
     public void setRefreshStatus(String refreshStatus) {
-        Log.i("lz", "refreshStatus::" + refreshStatus);
-
-        ((MaterialDesignPtrFrameLayout) getHostView()).setResistance(1.7f);
-        ((MaterialDesignPtrFrameLayout) getHostView()).setRatioOfHeaderHeightToRefresh(1.2f);
-        ((MaterialDesignPtrFrameLayout) getHostView()).setDurationToClose(200);
-        ((MaterialDesignPtrFrameLayout) getHostView()).setDurationToCloseHeader(1000);
         if (TextUtils.equals("show", refreshStatus)) {
             ((MaterialDesignPtrFrameLayout) getHostView()).postDelayed(new Runnable() {
                 @Override
@@ -101,10 +91,6 @@ public class RefreshView extends WXVContainer<MaterialDesignPtrFrameLayout> {
         } else if (TextUtils.equals("hide", refreshStatus)) {
             ((MaterialDesignPtrFrameLayout) getHostView()).refreshComplete();
         }
-        Log.i("lz", ((MaterialDesignPtrFrameLayout) getHostView()).getChildCount() + "" + ((MaterialDesignPtrFrameLayout) getHostView()).getChildAt(0));
-
-        Log.i("lz", "RefreshViewvv:" + getHostView().getHeight() + "::" + getHostView().getWidth() + ",,," + ((MaterialDesignPtrFrameLayout) getHostView()).getChildCount());
     }
-
 
 }
