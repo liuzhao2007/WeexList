@@ -10,8 +10,7 @@
 4. **完整的网络请求示例：参数、Header、Post请求等；**
 
 # 二、项目展示
-
-![项目展示](https://user-gold-cdn.xitu.io/2017/8/16/d87f8033f41a5de3cdf4c8849631e2d5)
+![项目展示](http://upload-images.jianshu.io/upload_images/4056837-6be5b0c6c344f13f?imageMogr2/auto-orient/strip)
 
 # 三、项目说明
 Clone项目之后可直接运行，两种下拉刷新的实现区别在于：
