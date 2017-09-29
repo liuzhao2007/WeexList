@@ -99,7 +99,7 @@
 	    "flexDirection": "row",
 	    "justifyContent": "space-between"
 	  },
-	  "allout": {
+	  "outterbg": {
 	    "backgroundColor": "#FFDDDD",
 	    "position": "absolute",
 	    "top": 0,
@@ -315,15 +315,9 @@
 	//
 	//
 	//
-	//
-	//
-	//
-	//
-	//
 
 	var stream = weex.requireModule('stream');
 	var modal = weex.requireModule('modal');
-	var getscrollModule = weex.requireModule('getscrollmodule');
 
 	exports.default = {
 	    data: function data() {
@@ -357,11 +351,9 @@
 	            }, function (res) {
 	                try {
 	                    self.showLoading = 'hide';
-	                    // self.$refs.refreshs.setRefreshStatus('hide')
 	                    console.log('get:' + (0, _stringify2.default)(res));
 	                    var results = res.data.data;
 	                    self.refreshing = false;
-
 	                    if (Array.isArray(results)) {
 	                        if (self.page == 1) {
 	                            self.items = [];
@@ -374,7 +366,6 @@
 	                            self.items.push(results[i]);
 	                        }
 	                    }
-
 	                    modal.toast({
 	                        message: '返回：' + results.length,
 	                        duration: 0.8
@@ -400,27 +391,6 @@
 	                duration: 0.8
 	            });
 	            self.page++;
-	        },
-	        onrefresh: function onrefresh(event) {
-	            var self = this;
-	            getscrollModule.setCanScroll(function (v) {
-	                modal.toast({
-	                    message: '下拉刷新',
-	                    duration: 0.8
-	                });
-
-	                self.page = 1;
-	                self.getRecommend(self.url);
-	            });
-
-	            modal.toast({
-	                message: '下拉刷新',
-	                duration: 0.8
-	            });
-	            self.refreshing = true;
-	        },
-	        onpullingdown: function onpullingdown(event) {
-	            console.log('is onpulling down');
 	        }
 	    },
 	    created: function created() {
@@ -460,7 +430,7 @@
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('div', {
-	    staticClass: ["allout"]
+	    staticClass: ["outterbg"]
 	  }, [_c('refreshview', {
 	    ref: "refreshs",
 	    staticClass: ["list"],
