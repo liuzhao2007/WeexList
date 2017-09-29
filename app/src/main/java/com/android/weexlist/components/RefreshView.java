@@ -79,7 +79,7 @@ public class RefreshView extends WXVContainer<MaterialDesignPtrFrameLayout> {
         return materialDesignPtrFrameLayout;
     }
 
-    @WXComponentProp(name = "diaplay")
+    @WXComponentProp(name = "display")
     public void setRefreshStatus(String refreshStatus) {
         if (TextUtils.equals("show", refreshStatus)) {
             ((MaterialDesignPtrFrameLayout) getHostView()).postDelayed(new Runnable() {

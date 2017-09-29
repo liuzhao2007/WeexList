@@ -435,7 +435,7 @@
 	    ref: "refreshs",
 	    staticClass: ["list"],
 	    attrs: {
-	      "diaplay": _vm.showLoading
+	      "display": _vm.showLoading
 	    }
 	  }, [_c('div', {
 	    staticClass: ["list"]

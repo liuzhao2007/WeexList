@@ -1,6 +1,6 @@
 <template>
     <div class="outterbg">
-    <refreshview :diaplay="showLoading"  ref="refreshs" class="list">
+    <refreshview :display="showLoading"  ref="refreshs" class="list">
     <div class="list">
         <list class="list">
             <cell>
