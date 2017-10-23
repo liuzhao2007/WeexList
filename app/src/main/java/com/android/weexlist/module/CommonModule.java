@@ -12,12 +12,11 @@ import com.taobao.weex.common.WXModule;
  * 展示自定义Module使用
  *
  */
-
 public class CommonModule extends WXModule {
 
     @JSMethod(uiThread = true)
     public void toast(String message) {
-        Toast.makeText(WeexListApp.getApp(), "" + message, 1).show();
+        Toast.makeText(WeexListApp.getApp(), "" + message, 0).show();
     }
 
 }

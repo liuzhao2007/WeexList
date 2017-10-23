@@ -57,9 +57,7 @@ export default {
                 url: 'https://app.chinahr.com/app/job/getJobRecommend',
                 page: 1,
                 showLoading: 'hide',
-                loadingText: '拼命加载中',
-                weexStar: 'unknown',
-                vueStar: 'unknown'
+                loadingText: '拼命加载中'
             }
         },
         methods: {

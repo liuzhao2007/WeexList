@@ -317,7 +317,7 @@
 	//
 
 	var stream = weex.requireModule('stream');
-	var modal = weex.requireModule('modal');
+	var modal = weex.requireModule('commonmodule');
 
 	exports.default = {
 	    data: function data() {
@@ -327,13 +327,14 @@
 	            url: 'https://app.chinahr.com/app/job/getJobRecommend',
 	            page: 1,
 	            showLoading: 'hide',
-	            loadingText: '拼命加载中',
-	            weexStar: 'unknown',
-	            vueStar: 'unknown'
+	            loadingText: '拼命加载中'
 	        };
 	    },
 
 	    methods: {
+	        itemclick: function itemclick() {
+	            modal.toast('click');
+	        },
 	        getRecommend: function getRecommend(url) {
 	            var self = this;
 	            var data = "currpage=" + self.page + "&degree=" + 0;
@@ -343,9 +344,9 @@
 	                type: 'json',
 	                url: url,
 	                headers: {
-	                    'cookie': 'PPS=lt=1504706800383&st=1502546800383&lts=32847949a5b5&sts=0b6939ca9692&uid=eb07b0e4789a1b57d5041767j&uname=;deviceID=355590362038182',
-	                    'deviceid': '863952039798457',
-	                    'uid': 'eb07b0e4789a1b57d5041767j'
+	                    'cookie': 'PPS=lt=1511341673420&st=1509181673420&lts=d2585bb59949&sts=7f1c52931f7a&uid=de86b0e45dc32e58a735e280j&uname=;deviceID=867981022740750',
+	                    'deviceid': '867981022740750',
+	                    'uid': 'de86b0e45dc32e58a735e280j'
 	                },
 	                body: data
 	            }, function (res) {
@@ -366,30 +367,21 @@
 	                            self.items.push(results[i]);
 	                        }
 	                    }
-	                    modal.toast({
-	                        message: '返回：' + results.length,
-	                        duration: 0.8
-	                    });
+	                    modal.toast('返回：' + results.length);
 	                } catch (e) {
 	                    console.log('获取失败：' + (0, _stringify2.default)(res));
 	                }
 	            }, function (res) {});
 	        },
 	        onloading: function onloading(event) {
-	            modal.toast({
-	                message: 'loading',
-	                duration: 1
-	            });
+	            modal.toast('loading');
 	            this.showLoading = 'show';
 	            this.loadMoreData();
 	        },
 	        loadMoreData: function loadMoreData() {
 	            var self = this;
 	            this.getRecommend(self.url);
-	            modal.toast({
-	                message: '执行了',
-	                duration: 0.8
-	            });
+	            modal.toast('执行了');
 	            self.page++;
 	        }
 	    },
@@ -456,6 +448,9 @@
 	      appendAsTree: true,
 	      attrs: {
 	        "append": "tree"
+	      },
+	      on: {
+	        "click": _vm.itemclick
 	      }
 	    }, [_c('div', {
 	      staticStyle: {
