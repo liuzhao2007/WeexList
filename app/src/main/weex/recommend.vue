@@ -4,7 +4,7 @@
             <cell>
                 <image class="header_image" src="http://i2.bvimg.com/602735/4d1760963a9516ae.png"></image>
             </cell>
-            <cell v-for="item in items">
+            <cell v-for="item in items" @click="itemclick">
                 <div class="itembg">
                     <div style="margin-left:10px ;margin-top: 20px;margin-right: 20px;background-color: white">
                         <div class="jobname">
@@ -48,7 +48,7 @@
 </template>
 <script>
 var stream = weex.requireModule('stream')
-const modal = weex.requireModule('modal')
+const modal = weex.requireModule('commonmodule')
 export default {
     data() {
             return {
@@ -63,6 +63,11 @@ export default {
             }
         },
         methods: {
+
+            itemclick(){
+                modal.toast('click')
+            },
+
             getRecommend(url) {
                 var self = this;
                 var data = "currpage=" + self.page + "&degree=" + 0;
@@ -71,9 +76,9 @@ export default {
                     type: 'json',
                     url: url,
                     headers: {
-                        'cookie': 'PPS=lt=1504706800383&st=1502546800383&lts=32847949a5b5&sts=0b6939ca9692&uid=eb07b0e4789a1b57d5041767j&uname=;deviceID=355590362038182',
-                        'deviceid': '863952039798457',
-                        'uid': 'eb07b0e4789a1b57d5041767j'
+                        'cookie': 'PPS=lt=1511341673420&st=1509181673420&lts=d2585bb59949&sts=7f1c52931f7a&uid=de86b0e45dc32e58a735e280j&uname=;deviceID=867981022740750',
+                        'deviceid': '867981022740750',
+                        'uid': 'de86b0e45dc32e58a735e280j'
                     },
                     body: data
                 }, function(res) {
@@ -93,31 +98,22 @@ export default {
                                 }
                                 self.items.push(results[i])
                             }
-                        }  
-                        modal.toast({
-                            message: '返回：' + results.length,
-                            duration: 0.8
-                        })
+                        }
+                        modal.toast(results.length)
                     } catch (e) {
                         console.log('获取失败：' + JSON.stringify(res));
                     }
                 }, function(res) {})
             },
             onloading(event) {
-                modal.toast({
-                    message: 'loading',
-                    duration: 1
-                })
+                modal.toast('loading')
                 this.showLoading = 'show'
                 this.loadMoreData()
             },
             loadMoreData() {
                 var self = this;
                 this.getRecommend(self.url)
-                modal.toast({
-                    message: '执行了',
-                    duration: 0.8
-                })
+                modal.toast('执行了')
                 self.page++
             }
         },
