@@ -315,15 +315,15 @@
 	            url: 'https://app.chinahr.com/app/job/getJobRecommend',
 	            page: 1,
 	            showLoading: 'hide',
-	            loadingText: '拼命加载中',
-	            weexStar: 'unknown',
-	            vueStar: 'unknown'
+	            loadingText: '拼命加载中'
 	        };
 	    },
 
 	    methods: {
 	        itemclick: function itemclick() {
 	            modal.toast('click');
+	            var self = this;
+	            self.items[0].bphoto = 'https://user-gold-cdn.xitu.io/2017/10/25/8452623131c167c204a4652a88b328f2';
 	        },
 	        getRecommend: function getRecommend(url) {
 	            var self = this;

@@ -63,7 +63,8 @@ export default {
         methods: {
 
             itemclick(){
-                modal.toast('click')
+                modal.toast('click');
+                items[0].bphoto = 'https://user-gold-cdn.xitu.io/2017/10/25/8452623131c167c204a4652a88b328f2'
             },
 
             getRecommend(url) {
