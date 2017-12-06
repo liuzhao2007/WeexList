@@ -30,3 +30,4 @@ Clone项目之后可直接运行，两种下拉刷新的实现区别在于：
 - [《Weex系列（一）之Weex入门准备》](http://www.jianshu.com/p/657896f60706)
 - [《Weex系列（二）之列表页实战》](http://www.jianshu.com/p/64288751cfc3)
 - [《Weex系列（三）之列表页实战冲突解决》](http://www.jianshu.com/p/27420a612d55)
+- [《深入Weex系列（四）之Module组件源码解析》](http://www.jianshu.com/p/208abd91f54e)
