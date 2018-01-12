@@ -77,9 +77,9 @@ export default {
                     type: 'json',
                     url: url,
                     headers: {
-                        'cookie': 'PPS=lt=1511341673420&st=1509181673420&lts=d2585bb59949&sts=7f1c52931f7a&uid=de86b0e45dc32e58a735e280j&uname=;deviceID=867981022740750',
-                        'deviceid': '867981022740750',
-                        'uid': 'de86b0e45dc32e58a735e280j'
+                        'cookie': 'PPS=lt=1518335014608&st=1516175014608&lts=05c8afe43d1b&sts=b78809c6af80&uid=eb07b0e4789a1b57d5041767j&uname=;deviceID=863952039798457',
+                        'deviceid': '863952039798457',
+                        'uid': 'eb07b0e4789a1b57d5041767j'
                     },
                     body: data
                 }, function(res) {
