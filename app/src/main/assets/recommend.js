@@ -451,7 +451,7 @@
 	    }, [_c('image', {
 	      staticClass: ["smallimg"],
 	      attrs: {
-	        "src": "http://p1.bqimg.com/567571/7ab7705afa1b2ade.png"
+	        "src": "http://ox17scdzy.bkt.clouddn.com/18-1-12/11695618.jpg"
 	      }
 	    }), _c('text', {
 	      staticClass: ["tv_location"],
@@ -461,7 +461,7 @@
 	    }, [_vm._v(_vm._s(item.workplaceList))]), _c('image', {
 	      staticClass: ["smallimg"],
 	      attrs: {
-	        "src": "http://i1.piimg.com/567571/5b22e11296a19844.png"
+	        "src": "http://ox17scdzy.bkt.clouddn.com/18-1-12/90428423.jpg"
 	      }
 	    }), _c('text', {
 	      staticClass: ["tv_location"],
@@ -471,7 +471,7 @@
 	    }, [_vm._v(_vm._s(item.experience))]), _c('image', {
 	      staticClass: ["smallimg"],
 	      attrs: {
-	        "src": "http://i1.piimg.com/567571/3a2b4625133f0f45.png"
+	        "src": "http://ox17scdzy.bkt.clouddn.com/18-1-12/38143824.jpg"
 	      }
 	    }), _c('text', {
 	      staticClass: ["tv_location"],

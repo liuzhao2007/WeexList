@@ -18,11 +18,11 @@
                             <image class="img" v-if="item.medal > 0" src="http://i1.piimg.com/567571/6cd980d1b219c912.png"></image>
                         </div>
                         <div class="jobarea">
-                            <image class="smallimg" src="http://p1.bqimg.com/567571/7ab7705afa1b2ade.png"></image>
+                            <image class="smallimg" src="http://ox17scdzy.bkt.clouddn.com/18-1-12/11695618.jpg"></image>
                             <text class="tv_location" style="padding: 5px;">{{item.workplaceList}}</text>
-                            <image class="smallimg" src="http://i1.piimg.com/567571/5b22e11296a19844.png"></image>
+                            <image class="smallimg" src="http://ox17scdzy.bkt.clouddn.com/18-1-12/90428423.jpg"></image>
                             <text class="tv_location" style="padding: 5px;">{{item.experience}}</text>
-                            <image class="smallimg" src="http://i1.piimg.com/567571/3a2b4625133f0f45.png"></image>
+                            <image class="smallimg" src="http://ox17scdzy.bkt.clouddn.com/18-1-12/38143824.jpg"></image>
                             <text class="tv_location" style="padding: 5px;">{{item.degree}}</text>
                         </div>
                         <div class="lineviewsmall">
