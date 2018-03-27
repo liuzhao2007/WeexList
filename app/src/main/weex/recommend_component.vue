@@ -4,7 +4,7 @@
     <div class="list">
         <list class="list">
             <cell>
-                <image class="header_image" src="http://i2.bvimg.com/602735/4d1760963a9516ae.png"></image>
+                <image class="header_image" src="http://ox17scdzy.bkt.clouddn.com/18-3-27/87691717.jpg"></image>
             </cell>
             <cell v-for="item in items" @click="itemclick">
                 <div style="background-color: #FFDDDD">
@@ -15,7 +15,7 @@
                         </div>
                         <div class="jobname">
                             <text class="tv_salary">{{item.salary}}</text>
-                            <image class="img" v-if="item.medal > 0" src="http://i1.piimg.com/567571/6cd980d1b219c912.png"></image>
+                            <image class="img" v-if="item.medal > 0" src="http://ox17scdzy.bkt.clouddn.com/18-3-27/94869582.jpg"></image>
                         </div>
                         <div class="jobarea">
                             <image class="smallimg" src="http://ox17scdzy.bkt.clouddn.com/18-1-12/11695618.jpg"></image>
@@ -77,8 +77,8 @@ export default {
                     type: 'json',
                     url: url,
                     headers: {
-                        'cookie': 'PPS=lt=1518335014608&st=1516175014608&lts=05c8afe43d1b&sts=b78809c6af80&uid=eb07b0e4789a1b57d5041767j&uname=;deviceID=863952039798457',
-                        'deviceid': '863952039798457',
+                        'cookie': 'PPS="lt=1524724530664&st=1522564530664&lts=9b8f9587f90b&sts=dda593312559&uid=eb07b0e4789a1b57d5041767j&uname=";deviceID=F0F98C85-9F60-4BED-9A2B-0046B39A922A',
+                        'deviceid': 'F0F98C85-9F60-4BED-9A2B-0046B39A922A',
                         'uid': 'eb07b0e4789a1b57d5041767j'
                     },
                     body: data
@@ -95,7 +95,7 @@ export default {
                             ++self.page
                             for (var i = 0; i < results.length; i++) {
                                 if (typeof(results[i].bphoto) !== 'string') {
-                                    results[i].bphoto = "http://i1.bvimg.com/602735/24e7a9d036063a9f.png"
+                                    results[i].bphoto = "http://ox17scdzy.bkt.clouddn.com/18-3-27/95069176.jpg"
                                 }
                                 self.items.push(results[i])
                             }
